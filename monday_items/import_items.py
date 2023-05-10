@@ -107,22 +107,6 @@ class MondayDeals():
                 self.statuses_dict["item_status"] = "In Progress"
                 self.statuses_dict["status_1"] = {"No Interest": "", "Contacted": "Relevant Lead", "Attempted to contact": ""}
                 self.statuses_dict["status_2"] = {"No Interest": "Contacted/Lost", "Contacted": "Contacted/Follow-up", "Attempted to contact": "Not Contacted"}
-            elif len(statuses) == 3 and "Junk Lead" in statuses and "Contacted" in statuses and "Attempted to contact" in statuses:
-                self.statuses_dict["item_status"] = "In Progress"
-                self.statuses_dict["status_1"] = {"Junk Lead": "Junk Lead", "Contacted": "Relevant Lead", "Attempted to contact": ""}
-                self.statuses_dict["status_2"] = {"Junk Lead": "", "Contacted": "Contacted/Follow-up", "Attempted to contact": "Not Contacted"}
-            elif len(statuses) == 2 and "No Interest" in statuses and "Follow up" in statuses:
-                self.statuses_dict["item_status"] = "In Progress"
-                self.statuses_dict["status_1"] = {"Follow up": "Relevant Lead", "No Interest": ""}
-                self.statuses_dict["status_2"] = {"Follow up": "Contacted/Follow-up", "No Interest": "Contacted/Lost"}
-            elif len(statuses) == 2 and "Attempted to contact" in statuses and "Follow up" in statuses:
-                self.statuses_dict["item_status"] = "In Progress"
-                self.statuses_dict["status_1"] = {"Attempted to contact": "", "Follow up": "Relevant Lead"}
-                self.statuses_dict["status_2"] = {"Attempted to contact": "Not Contacted", "Follow up": "Contacted/Follow-up"}
-            elif len(statuses) == 2 and "Contacted" in statuses and "Junk Lead" in statuses:
-                self.statuses_dict["item_status"] = "In Progress"
-                self.statuses_dict["status_1"] = {"Contacted": "Relevant Lead", "Junk Lead": "Junk Lead"}
-                self.statuses_dict["status_2"] = {"Contacted": "Contacted/Follow-up", "Junk Lead": ""}
             elif len(statuses) == 2 and "Attempted to contact" in statuses and "Not Contacted" in statuses:
                 self.statuses_dict["item_status"] = "Attempted to contact"
                 self.statuses_dict["status_1"] = {"Attempted to contact": "", "Not Contacted": ""}
